@@ -1,0 +1,256 @@
+@import 'tailwindcss';
+
+@theme {
+  --*: initial;
+
+  /* Colors */
+  --color-primary-blue: #2563eb;
+  --color-primary-blue-hover: #1d4ed8;
+  --color-primary-white: #ffffff;
+  --color-primary-black: #111827;
+  --color-primary-dark: #374151;
+  --color-secondary-dark: #4b5563;
+  --color-primary-grey: #6b7280;
+  --color-primary-grey-stroke: #d1d5db;
+  --color-secondary-grey-stroke: #e5e7eb;
+  --color-primary-green: #10b981;
+  --color-primary-purple: #9333ea;
+  --color-primary-dark-blue: #1e40af;
+  --color-primary-light-blue: #dbeafe;
+  --color-primary-dark-green: #166534;
+  --color-primary-light-green: #dcfce7;
+  --color-primary-dark-purple: #6b21a8;
+  --color-primary-light-purple: #f3e8ff;
+  --color-primary-dark-orange: #9a3412;
+  --color-primary-light-orange: #ffedd5;
+  --color-primary-dark-white: #f3f4f6;
+  --color-primary-indigo: #4f46e5;
+  --color-primary-light-indigo: #e0e7ff;
+  --color-primary-pink: #db2777;
+  --color-primary-light-pink: #fce7f3;
+  --color-primary-dark-red: #991b1b;
+  --color-primary-light-red: #fee2e2;
+  --color-primary-dark-yellow: #854d0e;
+  --color-primary-light-yellow: #fef9c3;
+  --color-secondary-dark-white: #f9fafb;
+  --color-primary-orange: #f97316;
+
+  /* Text sizes */
+  --text-sm: 0.75rem;
+  --text-md: 0.875rem;
+  --text-lg: 1rem;
+  --text-xl: 1.125rem;
+  --text-2xl: 1.25rem;
+  --text-3xl: 1.5rem;
+  --text-4xl: 1.875rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+  --text-7xl: 4.5rem;
+
+  /* Radius */
+  --radius-0: 0px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+
+  /* Fonts */
+  --font-inter: 'Inter', sans-serif;
+
+  /* Breakpoints */
+  --breakpoint-xs: 320px;
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 640px;
+  --breakpoint-lg: 768px;
+  --breakpoint-xl: 1024px;
+  --breakpoint-2xl: 1280px;
+  --breakpoint-3xl: 1440px;
+  --breakpoint-4xl: 1536px;
+  --breakpoint-5xl: 1920px;
+
+  /* Shadows */
+  --shadow-base: 0 4px 6px 0 rgb(0 0 0 / 0.1);
+  --shadow-base-lg: 0 10px 15px 0 rgb(0 0 0 / 0.1);
+}
+
+@utility d-header-3xl {
+  font-family: var(--font-inter);
+  font-size: var(--text-7xl);
+  font-weight: 700;
+}
+
+@utility d-header-2xl {
+  font-family: var(--font-inter);
+  font-size: var(--text-5xl);
+  font-weight: 700;
+}
+
+@utility d-header-xl {
+  font-family: var(--font-inter);
+  font-size: var(--text-4xl);
+  font-weight: 700;
+}
+
+@utility d-header-lg {
+  font-family: var(--font-inter);
+  font-size: var(--text-5xl);
+  font-weight: 700;
+}
+
+@utility d-header-md {
+  font-family: var(--font-inter);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+}
+
+@utility d-header-sm {
+  font-family: var(--font-inter);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+}
+
+@utility d-header-xs {
+  font-family: var(--font-inter);
+  font-size: var(--text-xl);
+  font-weight: 700;
+}
+
+@utility d-text-xl {
+  font-family: var(--font-inter);
+  font-size: var(--text-3xl);
+  font-weight: 400;
+}
+@utility d-text-lg {
+  font-family: var(--font-inter);
+  font-size: var(--text-2xl);
+  font-weight: 400;
+}
+@utility d-text-xlg {
+  font-family: var(--font-inter);
+  font-size: var(--text-xl);
+  font-weight: 400;
+}
+@utility d-text-md {
+  font-family: var(--font-inter);
+  font-size: var(--text-lg);
+  font-weight: 400;
+}
+@utility d-text-sm {
+  font-family: var(--font-inter);
+  font-size: var(--text-md);
+  font-weight: 400;
+}
+
+@utility d-text-xs {
+  font-family: var(--font-inter);
+  font-size: var(--text-sm);
+  font-weight: 400;
+}
+
+@utility d-medium-lg {
+  font-family: var(--font-inter);
+  font-size: var(--text-lg);
+  font-weight: 500;
+}
+
+@utility d-medium-md {
+  font-family: var(--font-inter);
+  font-size: var(--text-md);
+  font-weight: 500;
+}
+
+@utility d-medium-sm {
+  font-family: var(--font-inter);
+  font-size: var(--text-sm);
+  font-weight: 500;
+}
+
+@utility d-semibold-lg {
+  font-family: var(--font-inter);
+  font-size: var(--text-xl);
+  font-weight: 600;
+}
+
+@utility d-semibold-md {
+  font-family: var(--font-inter);
+  font-size: var(--text-lg);
+  font-weight: 600;
+}
+
+@utility d-semibold-sm {
+  font-family: var(--font-inter);
+  font-size: var(--text-md);
+  font-weight: 600;
+}
+
+@utility d-semibold-xs {
+  font-family: var(--font-inter);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+@utility d-bold-2xl {
+  font-family: var(--font-inter);
+  font-size: var(--text-6xl);
+  font-weight: 700;
+}
+
+@utility d-bold-xl {
+  font-family: var(--font-inter);
+  font-size: var(--text-4xl);
+  font-weight: 700;
+}
+
+@utility d-bold-lg {
+  font-family: var(--font-inter);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+}
+
+@utility d-bold-md {
+  font-family: var(--font-inter);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+}
+
+@utility d-bold-sm {
+  font-family: var(--font-inter);
+  font-size: var(--text-xl);
+  font-weight: 700;
+}
+
+@utility d-bold-xs {
+  font-family: var(--font-inter);
+  font-size: var(--text-lg);
+  font-weight: 700;
+}
+
+@utility d-bold-2xs {
+  font-family: var(--font-inter);
+  font-size: var(--text-sm);
+  font-weight: 700;
+}
+
+.fade-list-enter-active,
+.fade-list-leave-active {
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.fade-list-enter-from,
+.fade-list-leave-to {
+  opacity: 0;
+  transform: scale(0.97);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
