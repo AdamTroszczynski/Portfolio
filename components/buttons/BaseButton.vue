@@ -6,7 +6,9 @@
       setTextColor,
       setBgColor,
       slotHasContent ? '' : 'w-min',
+      isDisabled ? '!cursor-not-allowed opacity-60 active:scale-none' : '',
     ]"
+    :disabled="isDisabled"
   >
     <BaseIcon v-if="icon" :name="icon" :color="setIconColor" />
     <slot />
@@ -43,6 +45,10 @@ const props = defineProps({
     default: undefined,
   },
   isSmall: {
+    type: Boolean,
+    default: false,
+  },
+  isDisabled: {
     type: Boolean,
     default: false,
   },

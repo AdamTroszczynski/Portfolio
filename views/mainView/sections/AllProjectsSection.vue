@@ -16,31 +16,33 @@
         </template>
       </BaseHeader>
 
-      <div class="flex items-end justify-center gap-[8px] lg:gap-[16px]">
+      <div
+        class="gsapFadeIn flex items-end justify-center gap-[8px] lg:gap-[16px]"
+      >
         <BaseRadioButton
           v-model="mainViewStore.states.selectedFilter"
-          radio-value="All"
+          radio-value="all"
           name="projFilter"
         >
           All
         </BaseRadioButton>
         <BaseRadioButton
           v-model="mainViewStore.states.selectedFilter"
-          radio-value="Web app"
+          radio-value="webApp"
           name="projFilter"
         >
           Web dev
         </BaseRadioButton>
         <BaseRadioButton
           v-model="mainViewStore.states.selectedFilter"
-          radio-value="Website"
+          radio-value="website"
           name="projFilter"
         >
           Website
         </BaseRadioButton>
         <BaseRadioButton
           v-model="mainViewStore.states.selectedFilter"
-          radio-value="Mobile app"
+          radio-value="mobileApp"
           name="projFilter"
         >
           Mobile app
@@ -51,33 +53,35 @@
     <Transition name="fade-list" mode="out-in">
       <div
         :key="mainViewStore.states.selectedFilter"
-        class="flex flex-wrap justify-center gap-[25px] lg:max-w-[1216px] lg:gap-[33px] 2xl:justify-start"
+        class="gsapFadeIn flex flex-wrap justify-center gap-[25px] lg:max-w-[1216px] lg:gap-[33px] 2xl:justify-start"
       >
         <ProjectCard
           v-for="proj in filteredArray"
           :key="proj.id"
-          :header="proj.header"
-          :img-src="proj.imgSrc"
-          :button-color="proj.buttonColor"
-          :is-mobile="proj.type === 'Mobile app'"
-          :link-git="proj.linkGit"
+          :header="proj.name"
+          :img-src="proj.photos[0].imgSrc"
+          :button-color="proj.cardColor"
+          :is-mobile="proj.type === 'mobileApp'"
+          :link-git="proj.githubLink"
+          :url="proj.url"
         >
           <template #techStack>
-            <LabelsTechnologyLabel
-              v-for="tech in proj.techStack"
-              :key="tech.name"
-              :is-blue="tech.color === 'blue'"
-              :is-green="tech.color === 'green'"
-              :is-orange="tech.color === 'orange'"
-              :is-purple="tech.color === 'purple'"
-              :is-red="tech.color === 'red'"
-              :is-yellow="tech.color === 'yellow'"
+            <TechnologyLabel
+              v-for="tech in proj.mainTechStack"
+              :key="tech"
+              :is-blue="technologiesMap[tech].color === 'blue'"
+              :is-green="technologiesMap[tech].color === 'green'"
+              :is-orange="technologiesMap[tech].color === 'orange'"
+              :is-purple="technologiesMap[tech].color === 'purple'"
+              :is-red="technologiesMap[tech].color === 'red'"
+              :is-yellow="technologiesMap[tech].color === 'yellow'"
+              :is-black="technologiesMap[tech].color === 'black'"
             >
-              {{ tech.name }}
-            </LabelsTechnologyLabel>
+              {{ technologiesMap[tech].name }}
+            </TechnologyLabel>
           </template>
           <template #default>
-            {{ proj.desc }}
+            {{ proj.shortDesc }}
           </template>
         </ProjectCard>
       </div>
@@ -88,19 +92,20 @@
 <script setup lang="ts">
 import ProjectCard from '@mainView/components/allProjectsSection/ProjectCard.vue';
 import { useMainViewStore } from '@mainView/mainView.store';
-import { useProjectsStore } from '@mainView/ProjectsStore';
 
 import BaseHeader from '@/components/headers/BaseHeader.vue';
 import BaseRadioButton from '@/components/inputs/BaseRadioButton.vue';
 import BaseLabel from '@/components/labels/BaseLabel.vue';
+import TechnologyLabel from '@/components/labels/TechnologyLabel.vue';
+import { useMainStore } from '@/stores/mainStore';
+import { technologiesMap } from '@/stores/mainStore.types';
 
-const projectsStore = useProjectsStore();
+const mainStore = useMainStore();
 const mainViewStore = useMainViewStore();
 
 const filteredArray = computed(() => {
-  if (mainViewStore.states.selectedFilter === 'All')
-    return projectsStore.projects;
-  return projectsStore.projects.filter(
+  if (mainViewStore.states.selectedFilter === 'all') return mainStore.projects;
+  return mainStore.projects.filter(
     (el) => el.type === mainViewStore.states.selectedFilter,
   );
 });

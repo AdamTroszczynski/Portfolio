@@ -13,37 +13,32 @@
       </template>
     </BaseHeader>
 
-    <div class="flex flex-wrap justify-center gap-[24px] lg:gap-[34px]">
+    <div
+      class="gsapFadeIn flex flex-wrap justify-center gap-[24px] lg:gap-[34px]"
+    >
       <SpotlightCard
-        header="Smocze Prawko"
-        img-src="/photos/smoczePrawko/main.png"
+        v-for="n in [0, 1]"
+        :key="n"
+        :header="mainStore.projects[n].name"
+        :img-src="mainStore.projects[n].photos[n].imgSrc"
       >
         <template #default>
-          A web app for practicing theoretical driving exam questions, featuring
-          learning and exam modes, user statistics, premium account support, and
-          profile customization.
+          {{ mainStore.projects[n].shortDesc }}
         </template>
         <template #techStack>
-          <TechnologyLabel :is-green="true">Nuxt.js</TechnologyLabel>
-          <TechnologyLabel :is-blue="true">Nest.js</TechnologyLabel>
-          <TechnologyLabel :is-red="true">Redis</TechnologyLabel>
-          <TechnologyLabel :is-blue="true">TypeScript</TechnologyLabel>
-        </template>
-      </SpotlightCard>
-
-      <SpotlightCard
-        header="AI Customer Support Bot"
-        img-src="/photos/img.png"
-        button-color="primary-green"
-      >
-        <template #default>
-          An intelligent chatbot powered by machine learning with natural
-          language processing and sentiment analysis.
-        </template>
-        <template #techStack>
-          <TechnologyLabel :is-blue="true">Python</TechnologyLabel>
-          <TechnologyLabel :is-green="true">TensorFlow</TechnologyLabel>
-          <TechnologyLabel :is-purple="true">FastAPI</TechnologyLabel>
+          <TechnologyLabel
+            v-for="tech in mainStore.projects[n].mainTechStack"
+            :key="tech"
+            :is-blue="technologiesMap[tech].color === 'blue'"
+            :is-green="technologiesMap[tech].color === 'green'"
+            :is-yellow="technologiesMap[tech].color === 'yellow'"
+            :is-purple="technologiesMap[tech].color === 'purple'"
+            :is-red="technologiesMap[tech].color === 'red'"
+            :is-orange="technologiesMap[tech].color === 'orange'"
+            :is-black="technologiesMap[tech].color === 'black'"
+          >
+            {{ technologiesMap[tech].name }}
+          </TechnologyLabel>
         </template>
       </SpotlightCard>
     </div>
@@ -56,4 +51,8 @@ import SpotlightCard from '@mainView/components/spotlightProjectsSection/Spotlig
 import BaseHeader from '@/components/headers/BaseHeader.vue';
 import BaseLabel from '@/components/labels/BaseLabel.vue';
 import TechnologyLabel from '@/components/labels/TechnologyLabel.vue';
+import { useMainStore } from '@/stores/mainStore';
+import { technologiesMap } from '@/stores/mainStore.types';
+
+const mainStore = useMainStore();
 </script>

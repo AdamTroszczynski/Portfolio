@@ -26,6 +26,7 @@
         company="Volvo group IT"
         start-date="2024"
         :is-reverse="true"
+        class="gsapFadeIn"
       >
         <template #default>
           Development and maintenance of internal applications supporting
@@ -48,6 +49,7 @@
         company="Mandala software house"
         start-date="2022"
         end-date="2024"
+        class="gsapFadeIn"
       >
         <template #default>
           Full development of various projects — from simple websites to

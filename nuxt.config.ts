@@ -54,6 +54,6 @@ export default defineNuxtConfig({
 
   alias: {
     '@mainView': resolve(__dirname, './views/mainView'),
-    '@projects': resolve(__dirname, './views/projects'),
+    '@project': resolve(__dirname, './views/project'),
   },
 });

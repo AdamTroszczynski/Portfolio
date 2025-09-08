@@ -232,6 +232,12 @@
   font-weight: 700;
 }
 
+@utility d-bold-xxs {
+  font-family: var(--font-inter);
+  font-size: var(--text-md);
+  font-weight: 700;
+}
+
 .fade-list-enter-active,
 .fade-list-leave-active {
   transition:

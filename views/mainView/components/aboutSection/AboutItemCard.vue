@@ -1,10 +1,10 @@
 <template>
   <div
-    class="bg-primary-white shadow-base-lg relative flex w-full max-w-[358px] flex-col gap-[12px] overflow-hidden rounded-xl p-[22px] before:absolute before:top-[0px] before:left-[0px] before:h-[4px] before:w-full lg:max-w-[223px] lg:gap-[16px] lg:p-[26px]"
-    :class="setBgColor"
+    class="bg-primary-white shadow-base-lg group relative flex w-full max-w-[358px] flex-col gap-[12px] overflow-hidden rounded-xl border border-transparent p-[22px] transition-all duration-500 before:absolute before:top-[0px] before:left-[0px] before:h-[4px] before:w-full hover:-translate-y-[10px] lg:max-w-[223px] lg:gap-[16px] lg:p-[26px]"
+    :class="[setBgColor, setBorderColor]"
   >
     <div
-      class="flex h-[48px] w-[48px] items-center justify-center rounded-xl bg-gradient-to-r lg:h-[56px] lg:w-[56px]"
+      class="flex h-[48px] w-[48px] items-center justify-center rounded-xl bg-gradient-to-r transition-transform duration-500 group-hover:scale-[105%] lg:h-[56px] lg:w-[56px]"
       :class="setIconBgColor"
     >
       <BaseIcon :name="icon" :color="setIconColor" class="lg:scale-[100%]" />
@@ -17,8 +17,8 @@
 </template>
 
 <script setup lang="ts">
+import type { Colors, IconsName } from '@/components/components.types';
 import BaseIcon from '@/components/icons/BaseIcon.vue';
-import type { Colors, IconsName } from '~/components/components.types';
 const props = defineProps({
   header: {
     type: String,
@@ -65,6 +65,16 @@ const setBgColor = computed<string>(() => {
     props.isBlue && 'before:bg-primary-blue',
     props.isGreen && 'before:bg-primary-green',
     props.isPurple && 'before:bg-primary-purple',
+  ]
+    .filter(Boolean)
+    .join(' ');
+});
+
+const setBorderColor = computed<string>(() => {
+  return [
+    props.isBlue && 'hover:border-primary-blue',
+    props.isGreen && 'hover:border-primary-green',
+    props.isPurple && 'hover:border-primary-purple',
   ]
     .filter(Boolean)
     .join(' ');

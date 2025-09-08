@@ -1,9 +1,10 @@
 <template>
   <div
-    class="bg-secondary-dark-white border-secondary-grey-stroke flex min-w-[150px] flex-col items-center justify-center gap-[10px] rounded-lg border p-[13px] sm:min-w-[173px] lg:max-w-none lg:gap-[12px] lg:p-[17px] xl:w-full"
+    class="bg-secondary-dark-white border-secondary-grey-stroke group flex min-w-[150px] flex-col items-center justify-center gap-[10px] rounded-lg border p-[13px] transition-all duration-300 hover:-translate-y-[6px] sm:min-w-[173px] lg:max-w-none lg:gap-[12px] lg:p-[17px] xl:w-full"
+    :class="[borderHoverMap[color], bgHoverMap[color]]"
   >
     <div
-      class="flex h-[24px] w-[24px] items-center justify-center rounded-md lg:h-[32px] lg:w-[32px]"
+      class="flex h-[24px] w-[24px] items-center justify-center rounded-md transition-transform duration-300 group-hover:scale-[110%] lg:h-[32px] lg:w-[32px]"
       :class="bgColorMap[color]"
     >
       <BaseIcon :name="icon" color="primary-white" class="lg:scale-[130%]" />
@@ -20,6 +21,8 @@
 <script setup lang="ts">
 import {
   bgColorMap,
+  bgHoverMap,
+  borderHoverMap,
   type Colors,
   type IconsName,
 } from '@/components/components.types';

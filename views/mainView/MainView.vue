@@ -22,10 +22,16 @@ import NumbersSection from '@mainView/sections/NumbersSection.vue';
 import SkillsSection from '@mainView/sections/SkillsSection.vue';
 import SpotlightProjectsSection from '@mainView/sections/SpotlightProjectsSection.vue';
 
+import { useAnimations } from '@/composable/useAnimations';
+
 const mainViewStore = useMainViewStore();
 const lenis = useLenis();
 
+const { initFadeIn, initOpacity } = useAnimations();
+
 onMounted(async () => {
+  initFadeIn();
+  initOpacity();
   lenis.value?.stop();
   await refreshNuxtData();
   window.scrollTo({ top: mainViewStore.states.scroll });

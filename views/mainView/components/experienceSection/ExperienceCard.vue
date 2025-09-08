@@ -59,7 +59,7 @@
           <slot />
         </p>
         <div
-          class="flex gap-[4px] lg:gap-[8px]"
+          class="flex flex-wrap gap-[4px] lg:gap-[8px]"
           :class="isReverse ? 'lg:justify-end' : ''"
         >
           <slot name="technologies" />

@@ -18,10 +18,30 @@
         aria-label="Desktop menu"
         class="hidden xl:flex xl:items-center xl:gap-[30px]"
       >
-        <LinkButton section-id="#home"> Home </LinkButton>
-        <LinkButton section-id="#spotlightProjects">Gallery </LinkButton>
-        <LinkButton section-id="#about"> Project </LinkButton>
-        <LinkButton section-id="#skills"> Performance </LinkButton>
+        <LinkButton
+          :is-selected="selectedSection === '#home'"
+          section-id="#home"
+        >
+          Home
+        </LinkButton>
+        <LinkButton
+          :is-selected="selectedSection === '#gallery'"
+          section-id="#gallery"
+        >
+          Gallery
+        </LinkButton>
+        <LinkButton
+          :is-selected="selectedSection === '#about'"
+          section-id="#about"
+        >
+          Project
+        </LinkButton>
+        <LinkButton
+          :is-selected="selectedSection === '#performance'"
+          section-id="#performance"
+        >
+          Performance
+        </LinkButton>
       </nav>
 
       <div class="flex items-center gap-[12px] lg:w-[206px]">
@@ -48,10 +68,27 @@
       class="bg-primary-white absolute left-[0px] z-20 flex w-full flex-col gap-[20px] p-[12px] transition-transform duration-500 xl:hidden"
       :class="isMenuOpen ? 'translate-y-[70px]' : '-translate-y-[300px]'"
     >
-      <LinkButton section-id="#home"> Home </LinkButton>
-      <LinkButton section-id="#spotlightProjects">Gallery </LinkButton>
-      <LinkButton section-id="#about"> Project </LinkButton>
-      <LinkButton section-id="#skills"> Performance </LinkButton>
+      <LinkButton :is-selected="selectedSection === '#home'" section-id="#home">
+        Home
+      </LinkButton>
+      <LinkButton
+        :is-selected="selectedSection === '#gallery'"
+        section-id="#gallery"
+      >
+        Gallery
+      </LinkButton>
+      <LinkButton
+        :is-selected="selectedSection === '#about'"
+        section-id="#about"
+      >
+        Project
+      </LinkButton>
+      <LinkButton
+        :is-selected="selectedSection === '#performance'"
+        section-id="#performance"
+      >
+        Performance
+      </LinkButton>
       <BaseButton :is-small="true" :is-grey="true" icon="arrow" @click="back">
         Back to Projects
       </BaseButton>
@@ -59,13 +96,37 @@
   </header>
 </template>
 <script setup lang="ts">
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 import BaseButton from '@/components/buttons/BaseButton.vue';
 import LinkButton from '@/components/buttons/LinkButton.vue';
 import BaseIcon from '@/components/icons/BaseIcon.vue';
 
+type Sections = '#home' | '#gallery' | '#about' | '#performance';
+
 const isMenuOpen: Ref<boolean> = ref(false);
+const selectedSection: Ref<Sections> = ref('#home');
+
+const sections: Sections[] = ['#home', '#gallery', '#about', '#performance'];
 
 const back = async () => {
   await navigateTo('/');
 };
+
+onMounted(() => {
+  selectedSection.value = '#home';
+  sections.forEach((el) => {
+    ScrollTrigger.create({
+      trigger: el,
+      start: 'top center',
+      end: 'bottom center',
+      onEnter: () => {
+        selectedSection.value = el;
+      },
+      onEnterBack: () => {
+        selectedSection.value = el;
+      },
+    });
+  });
+});
 </script>

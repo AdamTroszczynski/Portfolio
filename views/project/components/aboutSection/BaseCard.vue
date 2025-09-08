@@ -1,19 +1,21 @@
 <template>
   <div
-    class="flex w-full max-w-[795px] flex-col gap-[16px] rounded-xl border bg-gradient-to-r p-[25px]"
+    class="gsapFadeIn flex w-full max-w-[795px] flex-col gap-[16px] rounded-xl border bg-gradient-to-r p-[25px] lg:gap-[24px] lg:p-[33px]"
     :class="setBgClasses"
   >
-    <div class="flex items-center gap-[12px]">
+    <div class="flex items-center gap-[12px] lg:gap-[16px]">
       <div
-        class="flex h-[40px] w-[40px] items-center justify-center rounded-lg"
+        class="flex h-[40px] w-[40px] items-center justify-center rounded-lg lg:h-[48px] lg:w-[48px]"
         :class="setBgColor"
       >
         <BaseIcon :name="icon" color="primary-white" />
       </div>
       <div class="flex flex-col gap-[8px]">
-        <h3 class="text-primary-black d-header-sm">{{ header }}</h3>
+        <h3 class="text-primary-black d-header-sm lg:d-header-md">
+          {{ header }}
+        </h3>
         <span
-          class="block h-[4px] w-[48px] rounded-full"
+          class="block h-[4px] w-[48px] rounded-full lg:w-[64px]"
           :class="setBgColor"
         ></span>
       </div>

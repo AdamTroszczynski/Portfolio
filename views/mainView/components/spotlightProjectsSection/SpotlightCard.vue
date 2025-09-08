@@ -1,14 +1,19 @@
 <template>
   <div
-    class="bg-priary-white shadow-base-lg flex max-w-[356px] flex-col overflow-hidden rounded-xl lg:max-w-[590px]"
+    class="bg-priary-white shadow-base-lg group flex max-w-[356px] flex-col overflow-hidden rounded-xl lg:max-w-[590px]"
   >
-    <img
-      :src="imgSrc"
-      alt="test"
-      class="min-h-[192px] w-full object-cover lg:max-h-[256px] lg:min-h-[256px]"
-    />
+    <div class="overflow-hidden">
+      <img
+        :src="imgSrc"
+        alt="test"
+        class="min-h-[192px] w-full object-cover transition-transform duration-400 group-hover:scale-[105%] lg:max-h-[256px] lg:min-h-[256px]"
+      />
+    </div>
     <div class="flex flex-col gap-[14px] p-[24px] lg:gap-[20px] lg:p-[32px]">
-      <h3 class="d-header-sm text-primary-black lg:d-header-md">
+      <h3
+        class="d-header-sm text-primary-black lg:d-header-md transition-colors duration-300"
+        :class="textHoverMap[buttonColor]"
+      >
         {{ header }}
       </h3>
       <p class="d-text-sm text-secondary-dark lg:d-text-md lg:min-h-[72px]">
@@ -42,7 +47,7 @@
 
 <script setup lang="ts">
 import BaseButton from '@/components/buttons/BaseButton.vue';
-import type { Colors } from '@/components/components.types';
+import { type Colors, textHoverMap } from '@/components/components.types';
 
 defineProps({
   header: {

@@ -13,7 +13,7 @@
     </BaseHeader>
 
     <div
-      class="flex w-full flex-col items-center gap-[24px] 2xl:flex-row 2xl:justify-center"
+      class="gsapFadeIn flex w-full flex-col items-center gap-[24px] 2xl:flex-row 2xl:justify-center"
     >
       <div
         class="flex w-full flex-col items-center gap-[24px] 2xl:max-w-[467px]"

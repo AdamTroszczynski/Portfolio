@@ -1,6 +1,7 @@
 <template>
   <div
-    class="bg-secondary-dark-white shadow-base-lg border-primary-dark-white flex max-w-[358px] flex-col items-center gap-[16px] rounded-xl border p-[33px] lg:w-[320px]"
+    class="bg-secondary-dark-white shadow-base-lg border-primary-dark-white flex w-full max-w-[358px] flex-col items-center gap-[16px] rounded-xl border p-[33px] transition-colors duration-300 lg:w-[320px]"
+    :class="isBlue ? 'hover:border-primary-blue' : 'hover:border-primary-green'"
   >
     <div
       class="mb-[8px] flex h-[64px] w-[64px] items-center justify-center rounded-xl"

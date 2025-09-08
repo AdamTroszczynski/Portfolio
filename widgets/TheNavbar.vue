@@ -166,6 +166,7 @@ onMounted(() => {
     ScrollTrigger.create({
       trigger: el,
       start: 'top center',
+      end: 'bottom center',
       onEnter: () => {
         selectedSection.value = el;
       },

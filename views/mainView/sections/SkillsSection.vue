@@ -19,6 +19,7 @@
         header="Frontend Development"
         icon="coding"
         color="primary-blue"
+        class="gsapFadeIn"
       >
         <SkillCard
           icon="vue"
@@ -51,7 +52,12 @@
         />
       </SkilsGroup>
 
-      <SkilsGroup header="Styling" icon="pen" color="primary-green">
+      <SkilsGroup
+        header="Styling"
+        icon="pen"
+        color="primary-green"
+        class="gsapFadeIn"
+      >
         <SkillCard
           icon="tailwind"
           label="Tailwind"
@@ -76,6 +82,7 @@
         header="Backend Development"
         icon="storage"
         color="primary-purple"
+        class="gsapFadeIn"
       >
         <SkillCard
           icon="express"
@@ -113,6 +120,7 @@
         header="DevOps & Tools"
         icon="toolbox"
         color="primary-dark-red"
+        class="gsapFadeIn"
       >
         <SkillCard
           icon="git"

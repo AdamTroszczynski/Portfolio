@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import SmoczePrawko from '@/views/projects/smoczePrawko/SmoczePrawko.vue';
+import SmoczePrawko from '@/views/project/project.vue';
 
 definePageMeta({
   layout: 'project',

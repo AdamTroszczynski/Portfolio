@@ -18,6 +18,7 @@
         header="Email Me"
         icon="biggerLetter"
         sub-header="adamtroszczynski@outlook.com"
+        class="gsapFadeIn"
       >
         <template #default>
           Drop me a line and I'll get back to you within 24 hours
@@ -39,6 +40,7 @@
         header="Call Me"
         icon="phone"
         sub-header="+48 882 416 797"
+        class="gsapFadeIn"
       >
         <template #default> Available for calls 24/7 </template>
 

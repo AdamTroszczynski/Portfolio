@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center gap-[14px] lg:gap-[16px]">
+  <div class="gsapFadeIn flex flex-col items-center gap-[14px] lg:gap-[16px]">
     <slot name="label" />
     <h2 class="d-header-xl text-primary-black lg:d-header-2xl">
       {{ header }}

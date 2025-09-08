@@ -17,7 +17,7 @@
       class="flex max-w-[358px] flex-wrap items-center justify-center gap-[24px] lg:w-full lg:max-w-none lg:flex-row lg:flex-nowrap lg:gap-[32px]"
     >
       <div
-        class="flex w-[167px] flex-col items-center justify-center gap-[2px] lg:w-[280px] lg:gap-[8px]"
+        class="gsapFadeIn flex w-[167px] flex-col items-center justify-center gap-[2px] lg:w-[280px] lg:gap-[8px]"
       >
         <h3 class="text-primary-white d-header-xl lg:d-bold-2xl text-center">
           10+
@@ -29,7 +29,7 @@
         </p>
       </div>
       <div
-        class="flex w-[167px] flex-col items-center justify-center gap-[2px] lg:w-[280px] lg:gap-[8px]"
+        class="gsapFadeIn flex w-[167px] flex-col items-center justify-center gap-[2px] lg:w-[280px] lg:gap-[8px]"
       >
         <h3 class="text-primary-white d-header-xl lg:d-bold-2xl text-center">
           25+
@@ -41,7 +41,7 @@
         </p>
       </div>
       <div
-        class="flex w-[167px] flex-col items-center justify-center gap-[2px] lg:w-[280px] lg:gap-[8px]"
+        class="gsapFadeIn flex w-[167px] flex-col items-center justify-center gap-[2px] lg:w-[280px] lg:gap-[8px]"
       >
         <h3 class="text-primary-white d-header-xl lg:d-bold-2xl text-center">
           100%
@@ -53,7 +53,7 @@
         </p>
       </div>
       <div
-        class="flex w-[167px] flex-col items-center justify-center gap-[2px] lg:w-[280px] lg:gap-[8px]"
+        class="gsapFadeIn lg:gap-[8px]* flex w-[167px] flex-col items-center justify-center gap-[2px] lg:w-[280px]"
       >
         <h3 class="text-primary-white d-header-xl lg:d-bold-2xl text-center">
           3+

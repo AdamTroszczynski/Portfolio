@@ -33,6 +33,10 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  isBlack: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 const setLabelClasses = computed<string>(() => {
@@ -43,6 +47,7 @@ const setLabelClasses = computed<string>(() => {
     props.isPurple && 'text-primary-dark-purple bg-primary-light-purple',
     props.isYellow && 'text-primary-dark-yellow bg-primary-light-yellow',
     props.isOrange && 'text-primary-dark-orange bg-primary-light-orange',
+    props.isBlack && 'text-primary-black bg-primary-dark/10',
   ]
     .filter(Boolean)
     .join(' ');

@@ -14,8 +14,10 @@
         class="hidden lg:absolute lg:top-[200px] lg:right-[100px] lg:block lg:h-[48px] lg:w-[48px] lg:rounded-full lg:bg-[#A855F7]/10"
       ></span>
     </div>
-    <OnlineLabel :is-green="true">Available for opportunities</OnlineLabel>
-    <div class="flex flex-col gap-[16px] lg:gap-[24px]">
+    <OnlineLabel :is-green="true" class="gsapOpacity"
+      >Available for opportunities</OnlineLabel
+    >
+    <div class="gsapOpacity flex flex-col gap-[16px] lg:gap-[24px]">
       <h1
         class="d-header-2xl text-primary-black md:d-header-2xl lg:d-header-3xl text-center"
       >
@@ -37,7 +39,7 @@
     </div>
 
     <div
-      class="flex w-full flex-col justify-center gap-[12px] md:flex-row lg:gap-[24px]"
+      class="gsapOpacity flex w-full flex-col justify-center gap-[12px] md:flex-row lg:gap-[24px]"
     >
       <div class="w-full md:max-w-[235px]">
         <BaseButton
@@ -54,7 +56,7 @@
       </div>
     </div>
     <div
-      class="text-primary-grey d-text-xs lg:d-text-sm flex items-center justify-center gap-[24px]"
+      class="text-primary-grey d-text-xs lg:d-text-sm gsapOpacity flex items-center justify-center gap-[24px]"
     >
       <div class="flex flex-col items-center justify-center">
         <span class="text-primary-blue d-bold-lg lg:d-bold-xl">10+</span>

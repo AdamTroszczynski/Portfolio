@@ -86,7 +86,14 @@ export type IconsName =
   | 'bot'
   | 'mobile'
   | 'refresh'
-  | 'stats';
+  | 'stats'
+  | 'biggerCoding'
+  | 'chain'
+  | 'chart'
+  | 'file'
+  | 'share'
+  | 'performance'
+  | 'shield';
 
 export const iconColorsMap: Record<Colors, string> = {
   'primary-blue': 'fill-primary-blue',
@@ -173,4 +180,91 @@ export const textColorMap: Record<Colors, string> = {
   'primary-light-pink': 'text-primary-light-pink',
   'primary-orange': 'text-primary-orange',
   'primary-dark-red': 'text-primary-dark-red',
+};
+
+export const textHoverMap: Record<Colors, string> = {
+  'primary-blue': 'group-hover:text-primary-blue',
+  'primary-blue-hover': 'group-hover:text-primary-blue-hover',
+  'primary-white': 'group-hover:text-primary-white',
+  'primary-black': 'group-hover:text-primary-black',
+  'primary-dark': 'group-hover:text-primary-dark',
+  'secondary-dark': 'group-hover:text-secondary-dark',
+  'primary-grey': 'group-hover:text-primary-grey',
+  'primary-grey-stroke': 'group-hover:text-primary-grey-stroke',
+  'secondary-grey-stroke': 'group-hover:text-secondary-grey-stroke',
+  'primary-green': 'group-hover:text-primary-green',
+  'primary-purple': 'group-hover:text-primary-purple',
+  'primary-dark-blue': 'group-hover:text-primary-dark-blue',
+  'primary-light-blue': 'group-hover:text-primary-light-blue',
+  'primary-dark-green': 'group-hover:text-primary-dark-green',
+  'primary-light-green': 'group-hover:text-primary-light-green',
+  'primary-dark-purple': 'group-hover:text-primary-dark-purple',
+  'primary-light-purple': 'group-hover:text-primary-light-purple',
+  'primary-dark-orange': 'group-hover:text-primary-dark-orange',
+  'primary-light-orange': 'group-hover:text-primary-light-orange',
+  'primary-dark-white': 'group-hover:text-primary-dark-white',
+  'primary-indigo': 'group-hover:text-primary-indigo',
+  'primary-light-indigo': 'group-hover:text-primary-light-indigo',
+  'primary-pink': 'group-hover:text-primary-pink',
+  'primary-light-pink': 'group-hover:text-primary-light-pink',
+  'primary-orange': 'group-hover:text-primary-orange',
+  'primary-dark-red': 'group-hover:text-primary-dark-red',
+};
+
+export const borderHoverMap: Record<Colors, string> = {
+  'primary-blue': 'hover:border-primary-blue',
+  'primary-blue-hover': 'hover:border-primary-blue-hover',
+  'primary-white': 'hover:border-primary-white',
+  'primary-black': 'hover:border-primary-black',
+  'primary-dark': 'hover:border-primary-dark',
+  'secondary-dark': 'hover:border-secondary-dark',
+  'primary-grey': 'hover:border-primary-grey',
+  'primary-grey-stroke': 'hover:border-primary-grey-stroke',
+  'secondary-grey-stroke': 'hover:border-secondary-grey-stroke',
+  'primary-green': 'hover:border-primary-green',
+  'primary-purple': 'hover:border-primary-purple',
+  'primary-dark-blue': 'hover:border-primary-dark-blue',
+  'primary-light-blue': 'hover:border-primary-light-blue',
+  'primary-dark-green': 'hover:border-primary-dark-green',
+  'primary-light-green': 'hover:border-primary-light-green',
+  'primary-dark-purple': 'hover:border-primary-dark-purple',
+  'primary-light-purple': 'hover:border-primary-light-purple',
+  'primary-dark-orange': 'hover:border-primary-dark-orange',
+  'primary-light-orange': 'hover:border-primary-light-orange',
+  'primary-dark-white': 'hover:border-primary-dark-white',
+  'primary-indigo': 'hover:border-primary-indigo',
+  'primary-light-indigo': 'hover:border-primary-light-indigo',
+  'primary-pink': 'hover:border-primary-pink',
+  'primary-light-pink': 'hover:border-primary-light-pink',
+  'primary-orange': 'hover:border-primary-orange',
+  'primary-dark-red': 'hover:border-primary-dark-red',
+};
+
+export const bgHoverMap: Record<Colors, string> = {
+  'primary-blue': 'hover:bg-primary-blue/10',
+  'primary-blue-hover': 'hover:bg-primary-blue-hover/10',
+  'primary-white': 'hover:bg-primary-white/10',
+  'primary-black': 'hover:bg-primary-black/10',
+  'primary-dark': 'hover:bg-primary-dark/10',
+  'secondary-dark': 'hover:bg-secondary-dark/10',
+  'primary-grey': 'hover:bg-primary-grey/10',
+  'primary-grey-stroke': 'hover:bg-primary-grey-stroke/10',
+  'secondary-grey-stroke': 'hover:bg-secondary-grey-stroke/10',
+  'primary-green': 'hover:bg-primary-green/10',
+  'primary-purple': 'hover:bg-primary-purple/10',
+  'primary-dark-blue': 'hover:bg-primary-dark-blue/10',
+  'primary-light-blue': 'hover:bg-primary-light-blue/10',
+  'primary-dark-green': 'hover:bg-primary-dark-green/10',
+  'primary-light-green': 'hover:bg-primary-light-green/10',
+  'primary-dark-purple': 'hover:bg-primary-dark-purple/10',
+  'primary-light-purple': 'hover:bg-primary-light-purple/10',
+  'primary-dark-orange': 'hover:bg-primary-dark-orange/10',
+  'primary-light-orange': 'hover:bg-primary-light-orange/10',
+  'primary-dark-white': 'hover:bg-primary-dark-white/10',
+  'primary-indigo': 'hover:bg-primary-indigo/10',
+  'primary-light-indigo': 'hover:bg-primary-light-indigo/10',
+  'primary-pink': 'hover:bg-primary-pink/10',
+  'primary-light-pink': 'hover:bg-primary-light-pink/10',
+  'primary-orange': 'hover:bg-primary-orange/10',
+  'primary-dark-red': 'hover:bg-primary-dark-red/10',
 };

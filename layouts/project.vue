@@ -2,10 +2,10 @@
   <div>
     <TheProjectNavbar />
     <slot />
-    <TheFooter />
+    <TheProjectFooter />
   </div>
 </template>
 <script setup lang="ts">
-import TheFooter from '@/widgets/TheFooter.vue';
+import TheProjectFooter from '@/widgets/TheProjectFooter.vue';
 import TheProjectNavbar from '@/widgets/TheProjectNavbar.vue';
 </script>
