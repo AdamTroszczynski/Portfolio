@@ -58,7 +58,7 @@
               class="lg:scale-[130%]"
             />
             <h4 class="d-semibold-xs text-primary-black lg:d-semibold-sm">
-              3+ Years
+              2+ Years
             </h4>
             <p class="text-primary-grey d-text-xs lg:d-text-sm">Experience</p>
           </div>

@@ -121,6 +121,7 @@ const props = defineProps({
 });
 
 const calcYears = computed<number>(() => {
+  return 1;
   return props.endDate === 'Present'
     ? Number(new Date().getFullYear()) - Number(props.startDate)
     : Number(props.endDate) - Number(props.startDate);

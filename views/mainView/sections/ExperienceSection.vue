@@ -24,7 +24,7 @@
         icon="coding"
         color="primary-blue"
         company="Volvo group IT"
-        start-date="2024"
+        start-date="2025"
         :is-reverse="true"
         class="gsapFadeIn"
       >
@@ -47,8 +47,8 @@
         icon="rocket"
         color="primary-orange"
         company="Mandala software house"
-        start-date="2022"
-        end-date="2024"
+        start-date="2024"
+        end-date="2025"
         class="gsapFadeIn"
       >
         <template #default>
